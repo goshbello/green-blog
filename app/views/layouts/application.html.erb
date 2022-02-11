@@ -10,9 +10,18 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="Site">
+    <%= render "layouts/navbar" %>
+    <main class="Site-content">
     <div class="page-container">
+
+      <% flash.each do |name, msg|%>
+        <%= msg %>
+      <% end %>
       <%= yield %>
     </div>
+
+    </main>
+    <%= render 'layouts/footer' %> 
   </body>
 </html>
