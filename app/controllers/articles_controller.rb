@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
 
+  before_action :set_article, only: [:show, :edit, :update, :destroy]
+
   def index
     @articles = Article.all
   end
@@ -9,7 +11,6 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    # render plain: params[:article]  This displays the form params in plain text. Just to check if form data is submit and all is working okay
     @article = Article.new(params_article)
     if @article.save
       flash[:notice] = "Article was saved successfully"
@@ -20,16 +21,12 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    #byebug --> use to pause program to verify what values are being passed at each stage
-    @article = Article.find(params[:id])
   end
 
   def edit
-    @article = Article.find(params[:id])
   end
 
   def update
-    @article = Article.find(params[:id])
     if @article.update(params_article)
       flash[:notice] = "Article was updated successfully"
       redirect_to @article
@@ -39,7 +36,6 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article = Article.find(params[:id])
     @article.destroy
     redirect_to articles_path
   end
@@ -51,5 +47,11 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:title, :description)
   end
 
+  def set_article
+    @article = Article.find(params[:id])
+  end
 
 end
+
+ #byebug --> use to pause program to verify values are being passed at each stage of execution
+ #render plain: params[:article]  Displays the form params in plain text.

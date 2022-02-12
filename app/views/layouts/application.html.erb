@@ -14,10 +14,7 @@
     <%= render "layouts/navbar" %>
     <main class="Site-content">
     <div class="page-container">
-
-      <% flash.each do |name, msg| %>
-        <%= msg %>
-      <% end %>
+    <%= render "layouts/messages" %>
       <%= yield %>
     </div>
 
