@@ -1,7 +1,7 @@
 * {margin: 0; padding: 0; box-sizing: border-box;}
 html {font-size: 62.5%;}
 .page-container {max-width: $container; margin: 16rem auto 0 auto;}
-body {font-size: 1.6rem;}
+body {font-size: 1.6rem; height: 100vh;}
 
 // sitcky footer styling
 .Site {
@@ -13,17 +13,7 @@ body {font-size: 1.6rem;}
 .Site-content {
   flex: 1;
 }
-.footer {
-  background-color: $secondary-color;
-  padding: 20px;
-  color: #fff;
-  text-align: center;
-}
 
-.link {
-  list-style: none;
-}
+.link {list-style: none;}
 
-.nav-a {
-  text-decoration: none;
-}
+.nav-a {text-decoration: none;}

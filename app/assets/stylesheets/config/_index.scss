@@ -13,13 +13,15 @@
     width: 50rem;
     height: 40rem;
     border-radius: 1rem;
+    margin-top: 3rem;
   }
+  
   &_content {
     display: flex;
     flex-direction: column;
-    animation: fadeleft .4s linear .4s backwards;
+    // animation: fadeleft .4s linear .4s backwards;
 
-    span {color: $secondary-color;}
+    span {color: $secondary-color; font-size: 5rem;}
 
   }
 
@@ -51,11 +53,11 @@
 
 }
 
-@keyframes fadeleft {
-  0% {
-    transform: translateX(-5rem);
-    opacity: 0;
-  }
-}
+// @keyframes fadeleft {
+//   0% {
+//     transform: translateX(-5rem);
+//     opacity: 0;
+//   }
+// }
 
 
