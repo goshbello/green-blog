@@ -1,4 +1,10 @@
-<h1 class="custom-color">Welcome to Green Blog</h1>
+<section class="wrapper">
+  <div class="wrapper_content">
+    <h1 class="wrapper_title">Welcome to <span>Green</span> Blog</h1>
+    <p class="wrapper_msg">Sign up for free and contribute to our educative blog</p>
+    <%= link_to 'Signup', articles_path, class:"wrapper_signup" %>
+  </div>
+  <div class="wrapper_image"><img class="wrapper_image" src = "/assets/blog_post.jpeg"></div>
+</section>
 
-<%= link_to 'Article listing', articles_path %>
 

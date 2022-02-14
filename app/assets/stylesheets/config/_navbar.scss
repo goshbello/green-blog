@@ -1,0 +1,50 @@
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem  5%;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+
+  &_logo {
+    text-decoration: none;
+    font-size: 3rem;
+    color: $secondary-color;
+    font-weight: 900;
+    font-family: $font-family;
+  
+    &:hover {
+      color:#666;
+    }
+  }
+
+
+  &_ul {
+    display: flex;
+    margin: auto 0;
+
+    .link {
+      &:not(:last-child){
+        padding-right: 2rem;
+      }
+    }
+
+    .nav-a {
+      // color: $white;
+      color: $secondary-color;
+      font-size: 2rem;
+
+      &:hover {
+        color:#666;
+      }
+   
+    } 
+  }
+
+}
+
+
+
+

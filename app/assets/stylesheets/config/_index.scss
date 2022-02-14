@@ -1,0 +1,61 @@
+.wrapper {
+  max-width: 120rem;
+  min-height: 60rem;
+  padding: 2rem;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &_image {
+    width: 50rem;
+    height: 40rem;
+    border-radius: 1rem;
+  }
+  &_content {
+    display: flex;
+    flex-direction: column;
+    animation: fadeleft .4s linear .4s backwards;
+
+    span {color: $secondary-color;}
+
+  }
+
+  &_title {
+    font-size: 4rem;
+  }
+
+
+  &_msg {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+  }
+
+  &_signup {
+    border: 2px solid $secondary-color;
+    padding: 1rem;
+    margin: auto;
+    text-decoration: none;
+    color: $white;
+    background-color: $secondary-color;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    border-radius: .5rem;
+    font-weight: bold;
+
+    &:hover {color: $secondary-color; background-color: $white;}
+  }
+
+}
+
+@keyframes fadeleft {
+  0% {
+    transform: translateX(-5rem);
+    opacity: 0;
+  }
+}
+
+

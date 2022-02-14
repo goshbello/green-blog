@@ -1,6 +1,6 @@
 * {margin: 0; padding: 0; box-sizing: border-box;}
 html {font-size: 62.5%;}
-.page-container {max-width: $container; margin: 0 auto;}
+.page-container {max-width: $container; margin: 16rem auto 0 auto;}
 body {font-size: 1.6rem;}
 
 // sitcky footer styling
@@ -8,15 +8,22 @@ body {font-size: 1.6rem;}
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  // font-size: $font-size;
 }
 
 .Site-content {
   flex: 1;
 }
 .footer {
-  background-color: $primary-color;
+  background-color: $secondary-color;
   padding: 20px;
   color: #fff;
   text-align: center;
+}
+
+.link {
+  list-style: none;
+}
+
+.nav-a {
+  text-decoration: none;
 }
