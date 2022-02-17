@@ -1,7 +1,13 @@
-* {margin: 0; padding: 0; box-sizing: border-box;}
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
 html {font-size: 62.5%;}
 .page-container {max-width: $container; margin: 16rem auto 0 auto;}
-body {font-size: 1.6rem; height: 100vh;}
+body {font-size: 1.6rem;}
 
 // sitcky footer styling
 .Site {
@@ -13,7 +19,3 @@ body {font-size: 1.6rem; height: 100vh;}
 .Site-content {
   flex: 1;
 }
-
-.link {list-style: none;}
-
-.nav-a {text-decoration: none;}

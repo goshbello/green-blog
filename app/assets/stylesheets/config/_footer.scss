@@ -1,9 +1,10 @@
 .footer {
   background-color: $secondary-color;
-  padding: 20px;
+  padding: 2rem;
   color: #fff;
   text-align: center;
   font-size: 2rem;
+  margin-top: 2rem;
 
   &_link {text-decoration: none; color: $white;}
 }
