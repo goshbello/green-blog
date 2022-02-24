@@ -15,6 +15,8 @@ class User < ApplicationRecord
              length: { maximum: 105 },
              format: {with: VALID_EMAIL_REGEX}
 
+  has_secure_password  # This active bycrpt functionalities to user model
+
 
 end
 
@@ -22,3 +24,8 @@ end
 # uniqueness: true ==> This will not check for case sensitivity. Meaning Aaa != aaa. Meaning username can be Aaa or aaa.
 
 # uniqueness: { case_sensitive: false }  ==> Meaning Aaa == aaa. Meaning if one username is Aaa another username can't be aaa.
+
+# BCrypt::Password.create(enter-your-password-to-hash-here)
+# Bcrypt code to create a hashed password from the console.
+# user,authenticate(provide-the-password-to-check)
+# use rails "authenticate" to check of provided password is equal to hashed password
