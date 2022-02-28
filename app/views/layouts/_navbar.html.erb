@@ -3,7 +3,26 @@
     <ul class="header_ul">
       <li class="link"><%= link_to 'Article listing', articles_path, class: "nav-a" %></li>
       <li class="link"><%= link_to 'Bloggers', users_path, class: "nav-a" %></li>
-      <li class="link"><%= link_to 'Create article', new_article_path, class: "nav-a" %></li>
-      <li class="link"><%= link_to 'Sign up', signup_path, class: "nav-a custom-signup" %></li>
-    </ul>   
+      
+      <% if logged_in? %>
+        <li class="link"><%= link_to 'Create article', new_article_path, class: "nav-a" %></li>
+     
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle fs-2 custom-style-dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <%= "(Admin)" if current_user.admin? %> Profile [<%= current_user.username %>]
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to "View your profile", user_path(current_user), class: "dropdown-item fs-3 custom-style-dropdown" %>
+          <%= link_to "Eidt your profile", edit_user_path(current_user), class: "dropdown-item fs-3 custom-style-dropdown" %>
+          <%= link_to "Delete account", user_path(current_user), class: "dropdown-item fs-3 custom-style-dropdown span", method: :delete, data: {confirm: "Are you sure?"} %>
+        </ul>
+      </li> 
+
+      <li class="link"><%= link_to 'Logout', logout_path, method: :delete, class: "nav-a custom-signup" %></li>
+      <% else %>
+        <li class="link"><%= link_to 'Login', login_path, class: "nav-a custom-signup" %></li>
+        <li class="link"><%= link_to 'Sign up', signup_path, class: "nav-a custom-signup" %></li>
+      <% end %>
+    </ul> 
+  
 </header>

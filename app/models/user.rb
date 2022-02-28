@@ -2,7 +2,9 @@ class User < ApplicationRecord
   #before saving user object, downcase all the letter in the user's email 
   before_save { self.email = email.downcase } 
 
-  has_many :articles #User can have many articles
+  #User can have many articles
+  has_many :articles, dependent: :destroy 
+  #dependent: :destroy, means if use delete their account, destroy all articles associated with that user
 
   validates :username, presence: true, 
              uniqueness: { case_sensitive: false },  

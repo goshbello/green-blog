@@ -1,6 +1,8 @@
 class ArticlesController < ApplicationController
 
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :require_login, except: [:index, :show]
+  before_action :require_same_user, only: [:edit, :update, :destroy] # make sure this comes below check if user has login before_action :require_login
 
   def index
     # @articles = Article.all
@@ -13,7 +15,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(params_article)
-    @article.user = User.first # temporary hard coded user
+    @article.user = current_user # current_user method is in application_controller.rb
     if @article.save
       flash[:notice] = "Article was saved successfully"
       redirect_to @article
@@ -51,6 +53,13 @@ class ArticlesController < ApplicationController
 
   def set_article
     @article = Article.find(params[:id])
+  end
+
+  def require_same_user
+    if current_user != @article.user && !current_user.admin?
+      flash[:alert] = "You can only edit or delete your own account"
+      redirect_to @article
+    end
   end
 
 end
