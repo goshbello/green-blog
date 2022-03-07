@@ -8,9 +8,11 @@ Rails.application.routes.draw do
   # routes to authenticate user - signup
   get 'signup', to: 'users#new'
   #post 'users', to: 'users#create' # post request to send completed form to the user create action
-  resources :users, except: [:new] # we replace the line 10 with this. we have already define new action in line 9, dont need new route again
+  resources :users, except: [:new] # Replaced line 10 with this. As new action already defined in line 9, dont need new route again
 
   get 'login', to: 'sessions#new'
 	post 'login', to: 'sessions#create'
 	delete 'logout', to: 'sessions#destroy'
+
+  resources :categories, except: [:destroy]
 end

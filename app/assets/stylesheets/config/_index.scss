@@ -35,20 +35,20 @@
     margin: 1.5rem 0;
   }
 
-  &_signup {
+  &_signup { 
     border: 2px solid $secondary-color;
     padding: 1rem;
     margin: auto;
     text-decoration: none;
-    color: $white;
-    background-color: $secondary-color;
+    color: $secondary-color;
+    background-color: #eee;
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: .2rem;
     border-radius: .5rem;
     font-weight: bold;
 
-    &:hover {color: $secondary-color; background-color: $white;}
+    &:hover {color: #fff; background-color: $secondary-color;}
   }
 
 }

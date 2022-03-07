@@ -1,4 +1,4 @@
-.header {
+.custom-nav-style {
   position: fixed;
   top: 0; left: 0; right: 0;
   background-color: $white;
@@ -8,59 +8,120 @@
   align-items: center;
   padding: 2rem  5%;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
-
-  &_logo {
-    text-decoration: none;
-    font-size: 3rem;
-    color: $secondary-color;
-    font-weight: 900;
-    font-family: $font-family;
-  
-    &:hover {
-      color:#666;
-    }
-  }
-
-
-  &_ul {
-    display: flex;
-    margin: auto 0;
-
-    .link {
-      &:not(:last-child){
-        padding-right: 2rem;
-      }
-    }
-
-    .custom-signup {
-      background-color: $secondary-color;
-      color: $white !important; 
-      font-weight: 500;
-
-      &:hover {
-        background-color: $white !important;
-        color: $secondary-color !important;
-      }
-    }
-
-    .nav-a {
-      // color: $white;
-      color: $secondary-color;
-      font-size: 2rem;
-      text-decoration: none;
-      border: 0.2rem solid $primary-color;
-      padding: 0.5rem;
-      border-radius: 0.5rem;
-
-      &:hover {
-        background-color: $secondary-color;
-        color:$white;
-      }
-   
-    } 
-  }
-
 }
+.logo {
+  text-decoration: none;
+  font-size: 3rem;
+  color: $secondary-color;
+  font-weight: 900;
+  font-family: $font-family;
+  margin-right: 3rem;
+
+  &:hover {
+    color:#666;
+  }
+}
+
+.new-a {
+  border: none;
+  color: $secondary-color;
+  text-decoration: none;
+  display: block;
+  padding-left: 1rem;
+
+  &:hover {
+    background-color: $secondary-color;
+    color:$white;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// .header {
+//   position: fixed;
+//   top: 0; left: 0; right: 0;
+//   background-color: $white;
+//   z-index: 1000;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 2rem  5%;
+//   box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+
+//   &_logo {
+//     text-decoration: none;
+//     font-size: 3rem;
+//     color: $secondary-color;
+//     font-weight: 900;
+//     font-family: $font-family;
+  
+//     &:hover {
+//       color:#666;
+//     }
+//   }
+
+
+//   &_ul {
+//     display: flex;
+//     margin: auto 0;
+
+//     .link {
+//       &:not(:last-child){
+//         padding-right: 2rem;
+//       }
+//     }
+
+    
+
+//     .custom-signup {
+//       background-color: $secondary-color;
+//       color: $white !important; 
+//       font-weight: 500;
+
+//       &:hover {
+//         background-color: $white !important;
+//         color: $secondary-color !important;
+//       }
+//     }
+
+//     .nav-a {
+//       // color: $white;
+//       color: $secondary-color;
+//       font-size: 2rem;
+//       text-decoration: none;
+//       border: 0.2rem solid $primary-color;
+//       padding: 0.5rem;
+//       border-radius: 0.5rem;
+
+//       &:hover {
+//         background-color: $secondary-color;
+//         color:$white;
+//       }
+   
+//     } 
+
+//     .new-a {
+//       border: none;
+//       color: $secondary-color;
+//       text-decoration: none;
+
+//       &:hover {
+//         background-color: $secondary-color;
+//         color:$white;
+//       }
+//     }
+//   }
+
+// }
 
 
 

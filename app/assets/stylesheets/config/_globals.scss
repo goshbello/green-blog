@@ -21,3 +21,25 @@ body {font-size: 1.6rem;}
 .Site-content {
   flex: 1;
 }
+
+a {
+  font-size: 1.9rem;
+  color: $secondary-color !important;
+
+  &:not(:last-child){
+    padding-right: 1rem !important;
+  }
+
+  &:hover {
+    background-color: $secondary-color;
+    color: #fff !important;
+  }
+  
+}
+
+.drop-style {
+
+  &:hover{
+    background-color: $secondary-color;
+  }
+}
