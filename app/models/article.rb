@@ -1,6 +1,10 @@
 class Article < ApplicationRecord
-
+    # for ==> has-many-association
     belongs_to :user
+
+    # for ==> many-to-many-association
+    has_many :article_categories
+    has_many :categories, through: :article_categories 
 
     #check these validations before saving article
     validates :title, presence: true, length: {minimum: 6, maximum: 100}

@@ -48,7 +48,7 @@ class ArticlesController < ApplicationController
   private
 
   def params_article
-    params.require(:article).permit(:title, :description)
+    params.require(:article).permit(:title, :description, category_ids: []) # categories_ids will store the list of categories added when creating new article
   end
 
   def set_article
